@@ -57,4 +57,10 @@ for i in 1..=10 {
 
 }
 
+fn main() {
+    let city = String::from("Chittagong");
+    let backup = city.clone();
 
+    println!("City: {}", city);
+    println!("Backup: {}", backup);
+}
