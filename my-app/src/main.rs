@@ -67,20 +67,20 @@ fn main() {
 
 
 fn is_valid_product_name(name: &String) -> bool {
-    name.len() > 0 // name খালি না হলে valid
+    name.len() > 0 
 }
 
 fn main() {
     let product = String::from("Rice Bag");
     let valid = is_valid_product_name(&product);
 
-    println!("Product: {}", product); // এখনো ব্যবহার করা যাচ্ছে
+    println!("Product: {}", product); 
     println!("Valid: {}", valid);
 
-    // একই product আবার অন্য function-এও পাঠানো যাবে, ownership হারায়নি বলে
+    
 }
 
 fn is_valid_product_name(name: &String) -> bool {
-    name.len() > 0 // name খালি না হলে valid
+    name.len() > 0 
 }
 
