@@ -14,23 +14,23 @@ fn main() {
 }
 
 
-// fn mini() {
-//     const student_id: u32 = 10; 
-//     let  gpa : f64 = 3.85;
-//     let is_passed : bool = true;
-//     let section : char=  'B';
-//     println!("{} {} {} {}", student_id, gpa, is_passed, section);
+fn mini() {
+    const student_id: u32 = 10; 
+    let  gpa : f64 = 3.85;
+    let is_passed : bool = true;
+    let section : char=  'B';
+    println!("{} {} {} {}", student_id, gpa, is_passed, section);
    
-// }
+}
 
-// fn discount() {
-//     let discount = "10"; 
-//     let  discount : u32 = discount.parse().expect("Not a valid number ");
-//     let discount = discount * 2;
+fn discount() {
+    let discount = "10"; 
+    let  discount : u32 = discount.parse().expect("Not a valid number ");
+    let discount = discount * 2;
     
-//     println!("{}", discount);
+    println!("{}", discount);
    
-// }
+}
 
 
 fn main (){
