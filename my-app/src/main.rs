@@ -76,11 +76,20 @@ fn main() {
 
     println!("Product: {}", product); 
     println!("Valid: {}", valid);
-
-    
 }
 
-fn is_valid_product_name(name: &String) -> bool {
-    name.len() > 0 
+
+
+fn print_greeting (name: &String){
+     println!("Hello, {}",name);
 }
+
+fn main (){
+    let friend = String ::from("Rakkkk");
+    print_greeting(&friend);
+
+     println!("{}", friend)
+
+}
+
 
