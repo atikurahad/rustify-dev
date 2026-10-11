@@ -1,69 +1,69 @@
-fn is_even(number: i32) -> bool {
-    if number % 2 == 0 {
-        true
-    } else {
-        false
-    }
-}
+// fn is_even(number: i32) -> bool {
+//     if number % 2 == 0 {
+//         true
+//     } else {
+//         false
+//     }
+// }
 
-fn main() {
-    let result1 = is_even(10);
-    let result2 = is_even(7);
-    println!("10 is even: {}", result1);
-    println!("7 is even: {}", result2);
-}
+// fn main() {
+//     let result1 = is_even(10);
+//     let result2 = is_even(7);
+//     println!("10 is even: {}", result1);
+//     println!("7 is even: {}", result2);
+// }
 
 
-fn mini() {
-    const student_id: u32 = 10; 
-    let  gpa : f64 = 3.85;
-    let is_passed : bool = true;
-    let section : char=  'B';
-    println!("{} {} {} {}", student_id, gpa, is_passed, section);
+// fn mini() {
+//     const student_id: u32 = 10; 
+//     let  gpa : f64 = 3.85;
+//     let is_passed : bool = true;
+//     let section : char=  'B';
+//     println!("{} {} {} {}", student_id, gpa, is_passed, section);
    
-}
+// }
 
-fn discount() {
-    let discount = "10"; 
-    let  discount : u32 = discount.parse().expect("Not a valid number ");
-    let discount = discount * 2;
+// fn discount() {
+//     let discount = "10"; 
+//     let  discount : u32 = discount.parse().expect("Not a valid number ");
+//     let discount = discount * 2;
     
-    println!("{}", discount);
+//     println!("{}", discount);
    
-}
+// }
 
 
-fn main (){
-let mut count = 0;
+// fn main (){
+// let mut count = 0;
 
-while count == 5 {
-    count += 1;
-    println!("{}",count)
-}
-println!("Done!")
-}
+// while count == 5 {
+//     count += 1;
+//     println!("{}",count)
+// }
+// println!("Done!")
+// }
 
-fn loopIteration(){
+// fn loopIteration(){
 
-for i in 1..=10 {
-    if i == 5 {
-        continue;
-    }
-    if i == 8 {
-        break;
-    }
-    println!("{}",i)
-}
+// for i in 1..=10 {
+//     if i == 5 {
+//         continue;
+//     }
+//     if i == 8 {
+//         break;
+//     }
+//     println!("{}",i)
+// }
 
-}
+// }
 
-fn main() {
-    let city = String::from("Chittagong");
-    let backup = city.clone();
+// fn main() {
+//     let city = String::from("Chittagong");
+//     let backup = city.clone();
 
-    println!("City: {}", city);
-    println!("Backup: {}", backup);
-}
+//     println!("City: {}", city);
+//     println!("Backup: {}", backup);
+// }
 
 
 fn is_valid_product_name(name: &String) -> bool {
@@ -79,17 +79,28 @@ fn main() {
 }
 
 
+fn remove_stock(stock: &mut i32, amount: i32) -> Result<(), String> {
+    if amount <= 0 {
+        return Err(String::from("Amount must be positive"));
+    }
 
-fn print_greeting (name: &String){
-     println!("Hello, {}",name);
+    if amount > *stock {
+        return Err(String::from("Not enough stock"));
+    }
+
+    *stock -= amount;
+    Ok(())
 }
 
-fn main (){
-    let friend = String ::from("Rakkkk");
-    print_greeting(&friend);
+fn main() {
+    let mut stock = 20;
 
-     println!("{}", friend)
-
+    match remove_stock(&mut stock, 5) {
+        Ok(()) => println!("Stock updated: {}", stock),
+        Err(error) => println!("Error: {}", error),
+    }
 }
+
+
 
 
