@@ -1,9 +1,8 @@
 fn main() {
+    let a: i8 = 10;
+    let b: u8 = 20;
 
-    const DAYS_IN_WEEK: u32 = 7;
-    let mut days = DAYS_IN_WEEK;
+    let result = a + b;
 
-    days = days + 1;
-
-    println!("{}", days);
+    println!("{}", result);
 }
