@@ -1,7 +1,9 @@
 fn main() {
 
-    let score = 50;
-    let score = 80;
-        let score = score + 10;
-    println!("Score: {}", score);
+    const DAYS_IN_WEEK: u32 = 7;
+    let mut days = DAYS_IN_WEEK;
+
+    days = days + 1;
+
+    println!("{}", days);
 }
