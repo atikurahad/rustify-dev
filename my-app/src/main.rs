@@ -7,14 +7,22 @@ fn conversion() {
 
     println!("{:?}", converted);
 }
+fn TryFrom() {
+    let number: u8 = 100;
+    let result = i8::try_from(number);
+
+    match result {
+        Ok(value) => println!("Success: {}", value),
+        Err(_) => println!("Conversion failed"),
+    }
+
+    println!("Program finished");
+}
 
 fn main() {
-    let a: i8 = 10;
-    let b: u8 = 20;
+  
 
-    let result = a + b as i8;
+    // conversion();
+    TryFrom();
 
-    conversion();
-
-    println!("{}", result);
 }
