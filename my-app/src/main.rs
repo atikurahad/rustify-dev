@@ -21,8 +21,14 @@ fn TryFrom() {
 
 fn main() {
   
+ let stock: u8 = 200;
 
+    let result = i8::try_from(stock);
+    let quantity = result.unwrap_or(0);
+
+    println!("Stock quantity: {}", quantity);
+    println!("Inventory check completed");
     // conversion();
-    TryFrom();
+    // TryFrom();
 
 }
