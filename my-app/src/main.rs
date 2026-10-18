@@ -23,6 +23,7 @@ fn main() {
     erroTypeUnwrap();
     conversion();
     TryFrom();
+    unwrapOrElse();
 
 }
 
@@ -32,6 +33,18 @@ fn erroTypeUnwrap() {
     let result = i8::try_from(stock);
 
 let quantity = result.unwrap_or_else(|_error| 20 + 5);
+    println!("Quantity: {}", quantity);
+    println!("Inventory checked");
+}
+fn unwrapOrElse() {
+    let stock: u8 = 120;
+    let result = i8::try_from(stock);
+
+    let quantity = result.unwrap_or_else(|error| {
+        println!("Error: {:?}", error);
+        30
+    });
+
     println!("Quantity: {}", quantity);
     println!("Inventory checked");
 }
