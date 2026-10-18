@@ -11,3 +11,14 @@ fn map_rs() {
 
     println!("{:?}", doubled);
 }
+
+fn main() {
+    let first: Result<i32, &str> = Ok(5);
+    let second: Result<i32, &str> = Err("Failed");
+
+    let a = first.map(|value| value * 2);
+    let b = second.map(|value| value * 2);
+
+    println!("{:?}", a);
+    println!("{:?}", b);
+}
