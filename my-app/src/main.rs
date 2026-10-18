@@ -20,15 +20,18 @@ fn TryFrom() {
 }
 
 fn main() {
-  
- let stock: u8 = 200;
+    erroTypeUnwrap();
+    conversion();
+    TryFrom();
+
+}
+
+fn erroTypeUnwrap() {
+    let stock: u8 = 200;
 
     let result = i8::try_from(stock);
-    let quantity = result.unwrap_or(0);
 
-    println!("Stock quantity: {}", quantity);
-    println!("Inventory check completed");
-    // conversion();
-    // TryFrom();
-
+let quantity = result.unwrap_or_else(|_error| 20 + 5);
+    println!("Quantity: {}", quantity);
+    println!("Inventory checked");
 }
