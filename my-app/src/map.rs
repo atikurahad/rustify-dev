@@ -22,3 +22,12 @@ fn main() {
     println!("{:?}", a);
     println!("{:?}", b);
 }
+fn main() {
+    let a = String::from("Mouse");
+    let b = a.clone();
+
+    let x = 5;
+    let y = x;
+
+    println!("{a}, {b}, {x}, {y}");
+}
