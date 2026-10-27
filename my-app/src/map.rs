@@ -38,3 +38,11 @@ let second = &mut stock; // Compile error
 
 *first += 5;
 *second += 2;
+
+let mut stock = 10;
+
+let read_stock = &stock;
+let update_stock = &mut stock; // ❌ Compile error
+
+println!("{read_stock}");
+*update_stock += 5;
