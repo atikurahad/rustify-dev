@@ -31,3 +31,10 @@ fn main() {
 
     println!("{a}, {b}, {x}, {y}");
 }
+let mut stock = 10;
+
+let first = &mut stock;
+let second = &mut stock; // Compile error
+
+*first += 5;
+*second += 2;
