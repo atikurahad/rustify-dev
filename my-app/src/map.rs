@@ -42,7 +42,20 @@ let second = &mut stock; // Compile error
 let mut stock = 10;
 
 let read_stock = &stock;
-let update_stock = &mut stock; // ❌ Compile error
+let update_stock = &mut stock; 
 
 println!("{read_stock}");
 *update_stock += 5;
+
+
+fn main() {
+    let mut stock = 10;
+
+    let read_stock = &stock;
+    println!("{read_stock}"); // read_stock-এর শেষ ব্যবহার
+
+    let update_stock = &mut stock;
+    *update_stock += 5;
+
+    println!("{stock}");
+}
