@@ -59,3 +59,15 @@ fn main() {
 
     println!("{stock}");
 }
+
+fn main() {
+    let mut stock = 10;
+
+    let first = &mut stock;
+    *first += 5;
+
+    let second = &mut stock;
+    *second += 2;
+
+    println!("{stock}");
+}
