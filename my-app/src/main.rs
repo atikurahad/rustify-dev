@@ -31,7 +31,7 @@ fn erroTypeUnwrap() {
 
     let result = i8::try_from(stock);
 
-let quantity = result.unwrap_or_else(|_error| 20 + 5);
+    let quantity = result.unwrap_or_else(|_error| 20 + 5);
     println!("Quantity: {}", quantity);
     println!("Inventory checked");
 }
